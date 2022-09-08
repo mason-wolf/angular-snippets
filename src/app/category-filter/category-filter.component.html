@@ -1,0 +1,25 @@
+<div class="container-fluid p-5">
+  <div class="row gx-1 mt-2">
+    <a [routerLink]="['/']"><button type="button" class="btn btn-success">Back</button></a><br><br>
+      <h1>Category Filter Example</h1>
+      <h4>View Aircraft by Category</h4>
+      <div class="col-sm-5 mt-4 p-2" [formGroup]="categoryForm">
+        <div class="p-4 shadow border-dark">
+          <section *ngFor="let category of aircraftCategories">
+            <mat-checkbox (change)="filterByCategory()" formControlName="{{category}}">{{ category }}</mat-checkbox>
+          </section><br>
+          <button type="button" class="btn btn-secondary" style="width:100%;" (click)="selectAll()">Select All</button>
+          <button type="button" class="btn btn-secondary mt-2" style="width:100%;" (click)="selectNone()">Select None</button>
+        </div>
+      </div>
+      <div class="col-sm-7 mt-4 p-2">
+        <div class="p-4 shadow border-dark">
+          <section *ngFor="let aircraft of displayedAircraft">
+            <h4>{{ aircraft.name }}</h4>
+            <!-- <img [src]="aircraft.img_url"> -->
+            <p> {{ aircraft.description }}</p>
+          </section>
+        </div>
+      </div>
+  </div>
+</div>

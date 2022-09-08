@@ -1,1 +1,38 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 24px;
+  font-weight: 100;
+  background-color: rgb(61, 60, 60);
+  color: #fff;
+}
+
+h1 {
+  font-weight: 600;
+}
+
+h4 {
+  font-weight: 200;
+  font-size: 32px;
+}
+
+.mat-checkbox-label {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 24px;
+  margin-left: 15px;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.border-dark {
+  border:1px solid rgb(116, 116, 116) !important;
+}
+
+img {
+  width: 300px;
+  height: 250px;
+}
+
+p {
+  padding: 0.5em;
+}
