@@ -1,0 +1,10 @@
+<div class="container-fluid p-5">
+  <div class="row gx-1 mt-2">
+    <a [routerLink]="['/']"><button type="button" class="btn btn-success">Back</button></a><br><br>
+      <h1>File Upload Example</h1>
+      <div class="col-sm-12 mt-4 p-2">
+      <input type="file" class="file-upload" (change)="uploadFile($event)" (click)="$event.target.value=null"><br><br>
+      Check output console for more info and component code for Python snippet handling FormData event.
+      </div>
+  </div>
+</div>

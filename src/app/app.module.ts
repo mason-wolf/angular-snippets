@@ -8,12 +8,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { CategoryFilterComponent } from './category-filter/category-filter.component';
+import { FileUploadComponent } from './file-upload/file-upload.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    CategoryFilterComponent
+    CategoryFilterComponent,
+    FileUploadComponent
   ],
   imports: [
     BrowserModule,
