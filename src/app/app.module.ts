@@ -9,13 +9,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { CategoryFilterComponent } from './category-filter/category-filter.component';
 import { FileUploadComponent } from './file-upload/file-upload.component';
+import { AdminPageComponent } from './admin-page/admin-page.component';
+import { AdminPageGuardService } from './services/admin-page-guard-service.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     CategoryFilterComponent,
-    FileUploadComponent
+    FileUploadComponent,
+    AdminPageComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +28,7 @@ import { FileUploadComponent } from './file-upload/file-upload.component';
     MatCheckboxModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [AdminPageGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
