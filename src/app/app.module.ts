@@ -11,13 +11,16 @@ import { CategoryFilterComponent } from './category-filter/category-filter.compo
 import { FileUploadComponent } from './file-upload/file-upload.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import {MatInputModule} from '@angular/material/input';
+import { AdminPageComponent } from './admin-page/admin-page.component';
+import { AdminPageGuardService } from './services/admin-page-guard-service.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     CategoryFilterComponent,
-    FileUploadComponent
+    FileUploadComponent,
+    AdminPageComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,7 @@ import {MatInputModule} from '@angular/material/input';
     MatDialogModule,
     MatInputModule
   ],
-  providers: [],
+  providers: [AdminPageGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
