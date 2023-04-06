@@ -16,5 +16,24 @@
             <a [routerLink]="['/file-upload']" style="float:right;"><button type="button" class="btn btn-success">View</button></a><br>
         </div>
       </div>
+      <div class="col-sm-5 mt-4 p-2">
+        <div class="p-4 shadow border-dark">
+          <h2>Modal</h2>
+          Material's Dialog Component<br>
+            <button type="button" class="btn btn-success" (click)="openDialog()">View</button>
+        </div>
+      </div>
   </div>
 </div>
+
+<!-- Add income dialog -->
+<ng-template #dialog>
+  <mat-dialog-actions align="end">
+      <i class="fa fa-window-close" mat-button matDialogClose="yes" style="font-size:32px;"></i>
+  </mat-dialog-actions>
+  <h2 style="padding:.5em;margin-top:-70px;">Popup Time</h2>
+  <div class="container-fluid">
+    Hello
+    <button type="button" class="btn btn-success" mat-dialog-close style="float:right;">OK</button>
+  </div>
+</ng-template>
